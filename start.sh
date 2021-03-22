@@ -19,7 +19,7 @@ else
 	echo "Provide constants.js to Run the bot. Exiting..."
 	exit 0
 fi
-tracker_list=`curl -Ns https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt | awk '$1' | tr '\n' ',' | cat`
+tracker_list=`curl -Ns https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/best_aria2.txt | awk '$1' | tr '\n' ',' | cat`
 if [[ -n $MAX_CONCURRENT_DOWNLOADS ]]; then
 	echo -e "\nmax-concurrent-downloads=$MAX_CONCURRENT_DOWNLOADS\nbt-tracker=$tracker_list" >> /bot/aria.conf
 else
